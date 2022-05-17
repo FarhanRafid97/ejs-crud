@@ -27,6 +27,7 @@ const detailProduct = async (req, res) => {
     console.log(error.message);
   }
 };
+
 const addProduct = async (req, res) => {
   const post = req.body;
 
@@ -40,7 +41,7 @@ const addProduct = async (req, res) => {
   }
 };
 
-const editProduct = async (req, res) => {
+const editProductData = async (req, res) => {
   const { id } = req.params;
   try {
     const product = await Product.findOne({
@@ -53,6 +54,7 @@ const editProduct = async (req, res) => {
     console.log(error.message);
   }
 };
+
 const editProductAction = async (req, res) => {
   const { id } = req.params;
   const post = req.body;
@@ -74,6 +76,7 @@ const editProductAction = async (req, res) => {
     console.log(error.message);
   }
 };
+
 const deleteProduct = async (req, res) => {
   const { id } = req.params;
   try {
@@ -93,7 +96,7 @@ module.exports = {
   addProduct,
   getProduct,
   detailProduct,
-  editProduct,
+  editProductData,
   deleteProduct,
   editProductAction,
 };
