@@ -1,0 +1,65 @@
+<div class="container"">
+    <a href="/" class="btn btn-dark mb-3"
+    >Lihat Data</a
+  >
+  <% if (msg.length !== 0) { %>
+    <div class="alert alert-success" role="alert">
+       <%= msg %> 
+      </div>
+  <% } %>
+<form method="POST" action="/product">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Product Name</label>
+    <input
+      type="text"
+      name="product_name"
+      class="form-control"
+      id="product_name"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Color</label>
+    <input
+      type="text"
+      name="color"
+      class="form-control"
+      id="color"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Stock</label>
+    <input
+      type="number"
+      name="stock"
+      class="form-control"
+      id="stock"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Price</label>
+    <input
+      type="number"
+      name="price"
+      class="form-control"
+      id="price"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Description</label>
+    <input
+      type="text"
+      name="description"
+      class="form-control"
+      id="description"
+    />
+  </div>
+  <div class="mb-3 form-check">
+    <input name="new_condition" type="checkbox" 
+            class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">New Condition</label>
+  </div>
+ 
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>

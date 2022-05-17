@@ -1,0 +1,7 @@
+PUT http://localhost:7889/product/edit
+Content-Type: application/json
+
+{
+    "id":"3",
+    "product_name":"BERHAsiL edit"
+}

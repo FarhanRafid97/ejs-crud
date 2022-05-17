@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <div class="card" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title"><%= product.product_name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      <p class="card-subtitle">STOCK : <%= product.stock %></p>
+      <h6 class="card-text">PRICE :<%= product.price %></h6>
+      <p class="card-text"><%= product.description %></p>
+      <h6 class="card-subtitle">
+        CONDITION : <%= product.new_condition ? "NEW" : "SECCOND" %>
+      </h6>
+    </div>
+    <a href="/" type="button" class="btn btn-dark">BACK</a>
+  </div>
+</div>

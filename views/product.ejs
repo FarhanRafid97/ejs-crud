@@ -1,0 +1,45 @@
+<div class="container p-5">
+  <h3 class="mx-auto d-flex">DATA PRODUCT</h3>
+  <a href="/form" class="btn btn-dark mb-3">Tambah data</a>
+  <% if (msg.length !== 0) { %>
+  <div class="alert alert-success" role="alert"><%= msg %></div>
+  <% } %>
+  <div class="row gy-5">
+    <% products.map((element,index) => { %>
+    <div class="col-3">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title"><%= element.product_name %></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+
+          <p class="card-text"><%= element.description %></p>
+          <h6 class="card-subtitle">
+            CONDITION : <%= element.new_condition ? "NEW" : "SECCOND" %>
+          </h6>
+        </div>
+        <div class="p-1 px-3">
+          <a
+            href="/product/edit/<%= element.id %>"
+            type="button"
+            class="btn btn-primary"
+            >EDIT</a
+          >
+          <a
+            href="/product/<%= element.id %>"
+            type="button"
+            class="btn btn-success"
+            >DETAIL</a
+          >
+
+          <a
+            href="/product/delete/<%= element.id %>"
+            type="button"
+            class="btn btn-danger"
+            >DELETE</a
+          >
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
